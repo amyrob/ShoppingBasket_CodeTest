@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class ShoppingBasket implements IDiscount {
     private ArrayList<Item> basket;
+    Customer customer;
 
     public ShoppingBasket() {
         this.basket = new ArrayList<>();
@@ -25,22 +26,46 @@ public class ShoppingBasket implements IDiscount {
         this.basket.clear();
     }
 
-    public double getTotal() {
-        double total = 0;
+    public double getSubTotal() {
+        double subTotal = 0;
         for (Item item : basket) {
-            total += item.getPrice();
+            subTotal += item.getPrice();
         }
-        return total;
+        return subTotal;
     }
 
     @Override
     public double bOgOF() {
         int items = getNumberOfItems();
         if (items % 2 != 0) {
-            return ((items - 1) / 2) * (getTotal()/ items) + (getTotal()/items);
+            return ((items - 1) / 2) * (getSubTotal() / items) + (getSubTotal() / items);
         } else {
-            return getTotal() * 0.5;
+            return getSubTotal() * 0.5;
+        }
+    }
+
+    @Override
+    public double discountOffTwentyPoundSpend() {
+        double total;
+        if (getSubTotal() > 20.00) {
+            total = getSubTotal() * 0.8;
+            return total;
+        } else {
+            return getSubTotal();
+        }
+
+    }
+
+    @Override
+    public double customerLoyaltyCardDiscount() {
+        double total;
+        if (customer.getLoyaltyCard()) {
+            total = discountOffTwentyPoundSpend() * 0.02;
+            return total;
+        } else {
+            return getSubTotal();
         }
     }
 }
+
 
