@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Shopping Basket Code Test.iml" filepath="$PROJECT_DIR$/.idea/modules/Shopping Basket Code Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Shopping_Basket_Code_Test.iml" filepath="$PROJECT_DIR$/.idea/modules/Shopping_Basket_Code_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Shopping_Basket_Code_Test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Shopping_Basket_Code_Test_main.iml" group="Shopping_Basket_Code_Test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Shopping_Basket_Code_Test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Shopping_Basket_Code_Test_test.iml" group="Shopping_Basket_Code_Test" />
+    </modules>
+  </component>
+</project>
