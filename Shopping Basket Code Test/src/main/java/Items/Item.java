@@ -1,8 +1,8 @@
 package Items;
 
-import Interfaces.IDiscount;
 
-public abstract class Item implements IDiscount{
+
+public abstract class Item{
     private String productCode;
     private String artist;
     private String title;

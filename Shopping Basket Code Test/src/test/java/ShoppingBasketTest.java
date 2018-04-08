@@ -49,5 +49,18 @@ public class ShoppingBasketTest {
     }
 
     @Test
+    public void canBoGoF_NoOfItemsInBasketIsEven() {
+    shoppingBasket.add(item);
+    shoppingBasket.add(item2);
+    assertEquals(15.99, shoppingBasket.bOgOF(), 0.5);
+    }
+
+    @Test
+    public void canBoGoF_NoOfItemsInBasketIsOdd() {
+        shoppingBasket.add(item);
+        shoppingBasket.add(item);
+        shoppingBasket.add(item2);
+        assertEquals(31.98, shoppingBasket.bOgOF(), 0.5);
+    }
 
 }

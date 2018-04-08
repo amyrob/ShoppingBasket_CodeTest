@@ -1,8 +1,8 @@
+import Interfaces.IDiscount;
 import Items.Item;
 import java.util.ArrayList;
-import java.util.Collections;
 
-public class ShoppingBasket {
+public class ShoppingBasket implements IDiscount {
     private ArrayList<Item> basket;
 
     public ShoppingBasket() {
@@ -27,11 +27,20 @@ public class ShoppingBasket {
 
     public double getTotal() {
         double total = 0;
-        for(Item item : basket) {
+        for (Item item : basket) {
             total += item.getPrice();
         }
         return total;
     }
-    
+
+    @Override
+    public double bOgOF() {
+        int items = getNumberOfItems();
+        if (items % 2 != 0) {
+            return ((items - 1) / 2) * (getTotal()/ items) + (getTotal()/items);
+        } else {
+            return getTotal() * 0.5;
+        }
+    }
 }
 
