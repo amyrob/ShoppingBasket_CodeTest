@@ -34,6 +34,14 @@ public class ShoppingBasket implements IDiscount {
         return subTotal;
     }
 
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
     @Override
     public double bOgOF() {
         int items = getNumberOfItems();
@@ -60,12 +68,13 @@ public class ShoppingBasket implements IDiscount {
     public double customerLoyaltyCardDiscount() {
         double total;
         if (customer.getLoyaltyCard()) {
-            total = discountOffTwentyPoundSpend() * 0.02;
+            total = discountOffTwentyPoundSpend() * 0.98;
             return total;
         } else {
             return getSubTotal();
         }
     }
+
 }
 
 

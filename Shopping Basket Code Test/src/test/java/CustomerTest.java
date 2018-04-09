@@ -30,13 +30,6 @@ public class CustomerTest {
     }
 
     @Test
-    public void canGetBasketTotal() {
-        customer.setBasket(shoppingBasket);
-        shoppingBasket.add(item);
-        assertEquals(10.99, customer.getBasketTotal(),0.05);
-    }
-
-    @Test
     public void canApplyLoyaltyCardDiscount() {
 
     }

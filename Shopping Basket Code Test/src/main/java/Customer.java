@@ -11,11 +11,4 @@ public class Customer {
         return this.loyaltyCard;
     }
 
-    public void setBasket(ShoppingBasket basket) {
-        this.basket = basket;
-    }
-
-    public double getBasketTotal() {
-        return basket.getSubTotal();
-    }
 }

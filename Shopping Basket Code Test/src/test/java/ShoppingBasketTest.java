@@ -52,6 +52,12 @@ public class ShoppingBasketTest {
     }
 
     @Test
+    public void canGetBasketTotal() {
+        shoppingBasket.setCustomer(customer);
+        assertEquals(customer, shoppingBasket.getCustomer());
+    }
+
+    @Test
     public void canBoGoF_NoOfItemsInBasketIsEven() {
     shoppingBasket.add(item);
     shoppingBasket.add(item2);
@@ -81,7 +87,7 @@ public class ShoppingBasketTest {
 
     @Test
     public void canApplyCustomerLoyalty() {
-        customer.setBasket(shoppingBasket);
+        shoppingBasket.setCustomer(customer);
         shoppingBasket.add(item);
         assertEquals(15.67, shoppingBasket.customerLoyaltyCardDiscount(),0.05);
     }
